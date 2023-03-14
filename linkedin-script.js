@@ -1,6 +1,14 @@
-onDOMContentLoaded = (event) => { 
-  const voyagerFeed = document.getElementById('voyager-feed');
-  console.log('this is the voyager feed', voyagerFeed);
-  console.log('we are inside of the linkedin scrip');
-};
+let intervalId = setInterval(() => {
+  console.log('trying to remove the element');
+  const main = document.getElementById('main');
+  if(main){
+    main.remove();
+    endInterval(intervalId);
+  } 
+
+}, 500);
+
+const endInterval = (id) => {
+  clearInterval(id);
+}
 
