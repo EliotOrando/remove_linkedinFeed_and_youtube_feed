@@ -1,0 +1,16 @@
+{
+  "name": "focus extension",
+  "version": "1.0",
+  "description": "remove distracting content from linkedin and youtube",
+  "manifest_version": 3,
+  "content_scripts" : [
+    {
+      "matches" : ["https://www.linkedin.com/feed/"],
+      "js" : ["linkedin-script.js"]
+    },
+    {
+      "matches" : ["https://www.youtube.com/"],
+      "js" : ["youtube-script.js"]
+    }
+  ]
+}
